@@ -9,7 +9,7 @@ It demonstrates real-world browser automation skills including form submission, 
 ## 📁 Project Structure
 
 ui-testing/
-ecommerce-testing/
+saucedemo-ui-testing/
 ├── tests/
 │ ├── test_add_to_cart_saucedemo.robot
 │ ├── test_checkout_flow_saucedemo.robot
@@ -69,7 +69,7 @@ cd ui-testing/ecommerce-testing
    report.html – test summary
    📸 Screenshots on failure: saved in output/
 
-📸 Example Failure Screenshot
+## 📸 Example Failure Screenshot  
 <img src="selenium-screenshot-1.png" width="600"/>
 
 🙋‍♂️ Use Case
@@ -77,6 +77,10 @@ This project can be used to:
    Demonstrate your UI automation skills to recruiters
    Practice writing modular Robot Framework tests
    Extend into page object–style frameworks in future
+---
+## 🔖 GitHub Topics
+
+robotframework • seleniumlibrary • saucedemo • ui-testing • test-automation
 
 ⭐ Star this repo if you find it helpful!
 
