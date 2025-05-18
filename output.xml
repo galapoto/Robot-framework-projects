@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-27T19:05:23.666882" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="D:\GitHub Repo\Robot-framework-projects\tests.robot">
 <test id="s1-t1" name="Open Websites" line="5">
@@ -26,11 +27,211 @@
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
+=======
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-18T18:10:06.054966" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Expanded Validation" source="D:\GitHub Repo\Robot-framework-projects\form-validation-project\tests\test_expanded_validation.robot">
+<kw name="Open Validation Form" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:06.532036" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-18T18:10:06.531647" elapsed="1.554578"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-18T18:10:08.086555" elapsed="0.032809"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:06.530398" elapsed="1.589154"/>
+</kw>
+<test id="s1-t1" name="Submit Empty Form Should Trigger Validation" line="10">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:08.120505" level="INFO">Opening url 'https://practice.expandtesting.com/form-validation'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-18T18:10:08.120285" elapsed="1.304396"/>
+</kw>
+<kw name="Click Register Button" owner="keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-18T18:10:09.425662" elapsed="0.284816"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:09.710943" level="INFO">Clicking element 'xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button'.</msg>
+<arg>xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:09.710696" elapsed="0.341986"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:09.425105" elapsed="0.627767"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:10.083327" level="INFO">Current page contains text 'Please enter your Contact name.'.</msg>
+<arg>Please enter your Contact name.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-18T18:10:10.053248" elapsed="0.030259"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:10.125811" level="INFO">Current page contains text 'Please provide your Contact number.'.</msg>
+<arg>Please provide your Contact number.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-18T18:10:10.084126" elapsed="0.041828"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:10.147544" level="INFO">Current page contains text 'Please provide valid Date.'.</msg>
+<arg>Please provide valid Date.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-18T18:10:10.127756" elapsed="0.019918"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:10.211583" level="INFO">Current page contains text 'Please select the Paymeny Method.'.</msg>
+<arg>Please select the Paymeny Method.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-18T18:10:10.149537" elapsed="0.062199"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:08.119680" elapsed="2.092478"/>
+</test>
+<test id="s1-t2" name="Submit Form With Invalid Contact Number Should Fail" line="18">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:10.214050" level="INFO">Opening url 'https://practice.expandtesting.com/form-validation'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-18T18:10:10.213804" elapsed="2.717225"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:12.932042" level="INFO">Typing text 'John Doe' into text field 'name=ContactName'.</msg>
+<arg>name=ContactName</arg>
+<arg>John Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:12.931556" elapsed="0.143458"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:13.075860" level="INFO">Typing text 'abc123' into text field 'name=ContactName'.</msg>
+<arg>name=ContactName</arg>
+<arg>abc123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:13.075466" elapsed="0.160241"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:13.236970" level="INFO">Selecting options from selection list 'name=payment' by label card.</msg>
+<arg>name=payment</arg>
+<arg>card</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-05-18T18:10:13.236336" elapsed="0.181944"/>
+</kw>
+<kw name="Set Pickup Date" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:13.419426" level="INFO">Typing text '2025-05-30' into text field 'name=pickupdate'.</msg>
+<arg>name=pickupdate</arg>
+<arg>${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:13.419178" elapsed="0.107530"/>
+</kw>
+<arg>2025-05-30</arg>
+<status status="PASS" start="2025-05-18T18:10:13.418751" elapsed="0.108083"/>
+</kw>
+<kw name="Click Register Button" owner="keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-18T18:10:13.527681" elapsed="0.280164"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:13.808328" level="INFO">Clicking element 'xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button'.</msg>
+<arg>xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:13.808072" elapsed="0.066412"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:13.527279" elapsed="0.347370"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:13.887222" level="INFO">Current page contains text 'Please provide your Contact number.'.</msg>
+<arg>Please provide your Contact number.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-18T18:10:13.874969" elapsed="0.012355"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:10.213138" elapsed="3.674484"/>
+</test>
+<test id="s1-t3" name="Submit Form With Valid Data Should Succeed" line="27">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:13.889122" level="INFO">Opening url 'https://practice.expandtesting.com/form-validation'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-18T18:10:13.888822" elapsed="1.630181"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:15.519900" level="INFO">Typing text 'John Doe' into text field 'name=ContactName'.</msg>
+<arg>name=ContactName</arg>
+<arg>John Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:15.519495" elapsed="0.112668"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:15.632852" level="INFO">Typing text '012-3456789' into text field 'name=contactnumber'.</msg>
+<arg>name=contactnumber</arg>
+<arg>012-3456789</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:15.632552" elapsed="0.125218"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:15.759145" level="INFO">Selecting options from selection list 'name=payment' by label cash on delivery.</msg>
+<arg>name=payment</arg>
+<arg>cash on delivery</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-05-18T18:10:15.758462" elapsed="0.073932"/>
+</kw>
+<kw name="Set Pickup Date" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:15.833268" level="INFO">Typing text '2025-05-30' into text field 'name=pickupdate'.</msg>
+<arg>name=pickupdate</arg>
+<arg>${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:15.833057" elapsed="0.080664"/>
+</kw>
+<arg>2025-05-30</arg>
+<status status="PASS" start="2025-05-18T18:10:15.832732" elapsed="0.081109"/>
+</kw>
+<kw name="Click Register Button" owner="keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-18T18:10:15.914459" elapsed="0.275456"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:16.190362" level="INFO">Clicking element 'xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button'.</msg>
+<arg>xpath=//*[@id="core"]/div/div/div/div/div/form/div[5]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-18T18:10:16.190126" elapsed="1.688076"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:15.914179" elapsed="1.964232"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-18T18:10:17.960620" level="INFO">Current page contains text 'Thank you for validating your ticket'.</msg>
+<arg>Thank you for validating your ticket</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-18T18:10:17.878814" elapsed="0.081974"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:13.888219" elapsed="4.073034"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-18T18:10:17.962907" elapsed="2.379039"/>
+</kw>
+<status status="PASS" start="2025-05-18T18:10:06.057327" elapsed="14.284719"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+>>>>>>> 97a0b04 (Add form validation project with expanded validation tests)
 </total>
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+=======
+<stat name="Test Expanded Validation" id="s1" pass="3" fail="0" skip="0">Test Expanded Validation</stat>
+>>>>>>> 97a0b04 (Add form validation project with expanded validation tests)
 </suite>
 </statistics>
 <errors>
